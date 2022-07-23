@@ -14,3 +14,6 @@
 [submodule "pack/vendor/start/nerdtree"]
 	path = pack/vendor/start/nerdtree
 	url = https://github.com/preservim/nerdtree
+[submodule "pack/tpope/start/sensible"]
+	path = pack/tpope/start/sensible
+	url = https://tpope.io/vim/sensible.git
