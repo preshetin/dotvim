@@ -8,3 +8,6 @@
 [submodule "pack/dist/start/vim-airline"]
 	path = pack/dist/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
+[submodule "pack/pantharshit00/start/vim-prisma"]
+	path = pack/pantharshit00/start/vim-prisma
+	url = https://github.com/pantharshit00/vim-prisma
