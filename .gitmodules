@@ -11,3 +11,6 @@
 [submodule "pack/pantharshit00/start/vim-prisma"]
 	path = pack/pantharshit00/start/vim-prisma
 	url = https://github.com/pantharshit00/vim-prisma
+[submodule "pack/vendor/start/nerdtree"]
+	path = pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree
