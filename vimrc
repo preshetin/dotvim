@@ -93,9 +93,6 @@ vmap <Leader>y :w !pbcopy<CR><CR>
 "Copy current file name to clipboard
 nnoremap <Leader>fy :!echo -n % \| pbcopy<cr><cr>
 
-"easier auto fixing
-"command Fix ALEFix
-nmap <Leader>f :ALEFix<cr>
 
 "toggle show/hide line numbers
 noremap <leader>l :set invnumber<cr> 
@@ -258,6 +255,11 @@ highlight GitGutterDelete guifg=#ff2222 guibg=#073642 ctermfg=1 ctermbg=0
 let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_removed_first_line = '^_'
 let g:gitgutter_sign_modified_removed = 'ww'
+
+"Set Airline theme. Here're screenshots:
+" Try new themes with :AirlineTheme <tab>
+" https://github.com/vim-airline/vim-airline/wiki/Screenshots
+let g:airline_theme='sol'
 
 " Auto source vimrc file on save
 " autocmd! bufwritepost $MYVIMRC source $MYVIMRC

@@ -17,3 +17,6 @@
 [submodule "pack/tpope/start/sensible"]
 	path = pack/tpope/start/sensible
 	url = https://tpope.io/vim/sensible.git
+[submodule "pack/dist/start/vim-airline-themes"]
+	path = pack/dist/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
