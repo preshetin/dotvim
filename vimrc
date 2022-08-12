@@ -34,21 +34,24 @@ inoremap {;<CR> {<CR>};<ESC>O
 "-----------------Mappings----------{{{--"
 
 "Make it easy to edit .vimrc file"
-nmap <Leader>ev :e $MYVIMRC<cr>
+nmap <leader>ev :e $MYVIMRC<cr>
 
 "Add simple hilight search removal"
-nmap <Leader><space> :nohlsearch<cr>
+nmap <leader><space> :nohlsearch<cr>
 
 "Adjust class names for JSX
-nmap <Leader>cl :%s/class=/className=/g<cr>
+nmap <leader>cl :%s/class=/className=/g<cr>
 
 
-nmap <Leader>w :w<cr>
-nmap <Leader>wa :wa<cr>
+nmap <leader>w :w<cr>
+nmap <leader>wa :wa<cr>
 
 
 "Make NERDTree easier to toggle
-nmap <Leader>1 :NERDTreeToggle<cr>
+nmap <leader>1 :NERDTreeToggle<cr>
+
+nmap <leader>ff :NERDTreeFocus<cr>
+nmap <leader>fc :NERDTreeFind<cr>
 
 nmap <Leader>dd :colorscheme Tomorrow<cr>
 nmap <Leader>nn :colorscheme Tomorrow-Night<cr>
