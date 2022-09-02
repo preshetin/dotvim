@@ -50,8 +50,8 @@ nmap <leader>wa :wa<cr>
 "Make NERDTree easier to toggle
 nmap <leader>1 :NERDTreeToggle<cr>
 
-nmap <leader>ff :NERDTreeFocus<cr>
-nmap <leader>fc :NERDTreeFind<cr>
+nmap <leader>11 :NERDTreeFocus<cr>
+nmap <leader>111 :NERDTreeFind<cr>
 
 nmap <Leader>dd :colorscheme Tomorrow<cr>
 nmap <Leader>nn :colorscheme Tomorrow-Night<cr>
@@ -59,6 +59,10 @@ nmap <Leader>nn :colorscheme Tomorrow-Night<cr>
 nmap <Leader>conc :%s/console.log/\/\/console.log/g<cr>:nohlsearch<cr>
 nmap <Leader>cons :%s/\/\/console.log/console.log/g<cr>:nohlsearch<cr>
 
+" tweak colorcheme
+" see https://gist.github.com/ykrsm/a5f9f0e59c14ba498302b7780e988b99
+highlight Search guifg=Black guibg=Yellow
+highlight Cursor guifg=White guibg=Black
 
 " Toggles between file and its test coverage
 function! s:TestFileToggle()
@@ -84,8 +88,12 @@ nmap <Leader>tt :TestFileToggle<cr>
 function! ColorschemeToggle()
   if g:colors_name == 'Tomorrow-Night'
     colorscheme Tomorrow
+    highlight Search guifg=Black guibg=Yellow
+    highlight Cursor guifg=White guibg=Black
   else
     colorscheme Tomorrow-Night
+    highlight Search guifg=Black guibg=Yellow
+    highlight Cursor guifg=White guibg=Orange
   endif
 endfunction
 
@@ -185,9 +193,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
-"Applies quick-fix
-nmap <leader>qf <Plug>(coc-fix-current)
-
 " Remap for format selected region
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
@@ -263,6 +268,14 @@ let g:gitgutter_sign_modified_removed = 'ww'
 " Try new themes with :AirlineTheme <tab>
 " https://github.com/vim-airline/vim-airline/wiki/Screenshots
 let g:airline_theme='sol'
+
+
+"-- FOLDING --  
+" taken from https://alldrops.info/posts/vim-drops/2018-04-25_javascript-folding-on-vim/
+set foldmethod=syntax "syntax highlighting items specify folds  
+set foldcolumn=1 "defines 1 col at window left, to indicate folding  
+let javaScript_fold=1 "activate folding by JS syntax  
+set foldlevelstart=99 "start file with all folds opened
 
 " Auto source vimrc file on save
 " autocmd! bufwritepost $MYVIMRC source $MYVIMRC
